@@ -1,5 +1,0 @@
-Id/Name/Street/City/Gender/Zip
-1/Merve/Adnan Menderes/Aydin/F/1234
-2/Mete/Adnan Menderes/Amasya/M/2222
-3/Abdullah/Adnan Menderes/Aydin/M/3333
-4/Kerem Beytullah/Adnan Menderes/Istanbul/M/4444
