@@ -17,7 +17,7 @@ import javafx.scene.paint.Color;
 public class Main extends Application {
 	String temp;
 	String option;
-	boolean control = false; // En son bunu yapacakken kaldým
+	boolean control = false;
 
 	Label label = new Label("0");
 	Button button0 = new Button("0");
@@ -51,15 +51,15 @@ public class Main extends Application {
 	}
 
 	public void setLabelText(float result) {
-		if (result % 2 == 0) {
+		if (result % 1 == 0) {
 			lastControlForLabel(String.valueOf((int) result));
 		} else {
 			lastControlForLabel(String.valueOf(result));
 		}
 	}
-	
+
 	public void lastControlForLabel(String text) {
-		if (text.length()<8) {
+		if (text.length() < 8) {
 			label.setText(text);
 		}
 	}
@@ -68,32 +68,43 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			label.setTextFill(Color.WHITE);
-			buttonAC.setStyle("-fx-background-color: a6a6a6 ;");
-			buttonPlusMinus.setStyle("-fx-background-color: a6a6a6 ;");
-			buttonPercent.setStyle("-fx-background-color: a6a6a6 ;");
-			buttonDivide.setStyle("-fx-background-color: ff9501 ;");
-			buttonMultiply.setStyle("-fx-background-color: ff9501 ;");
-			buttonSubtraction.setStyle("-fx-background-color: ff9501 ;");
-			buttonPlus.setStyle("-fx-background-color: ff9501 ;");
-			buttonEqual.setStyle("-fx-background-color: ff9501 ;");
-			button0.setStyle("-fx-background-color: 3d3d3d ;");
-			button1.setStyle("-fx-background-color: 3d3d3d ;");
-			button2.setStyle("-fx-background-color: 3d3d3d ;");
-			button3.setStyle("-fx-background-color: 3d3d3d ;");
-			button4.setStyle("-fx-background-color: 3d3d3d ;");
-			button5.setStyle("-fx-background-color: 3d3d3d ;");
-			button6.setStyle("-fx-background-color: 3d3d3d ;");
-			button7.setStyle("-fx-background-color: 3d3d3d ;");
-			button8.setStyle("-fx-background-color: 3d3d3d ;");
-			button9.setStyle("-fx-background-color: 3d3d3d ;");
-			buttonDot.setStyle("-fx-background-color: 3d3d3d ;");
-			button0.setStyle("-fx-min-width: 172px; " + "-fx-max-width: 172px; ");
+			buttonAC.setStyle("-fx-background-color: rgb(212,212,210) ;");
+			buttonPlusMinus.setStyle("-fx-background-color: rgb(212,212,210) ;");
+			buttonPercent.setStyle("-fx-background-color: rgb(212,212,210) ;");
+			buttonDivide.setStyle("-fx-background-color: rgb(255,149,0) ;");
+			buttonMultiply.setStyle("-fx-background-color: rgb(255,149,0) ;");
+			buttonSubtraction.setStyle("-fx-background-color: rgb(255,149,0) ;");
+			buttonPlus.setStyle("-fx-background-color: rgb(255,149,0) ;");
+			buttonEqual.setStyle("-fx-background-color: rgb(255,149,0) ;");
+			button0.setStyle(
+					"-fx-background-color: rgb(80,80,80) ;" + "-fx-min-width: 172px; " + "-fx-max-width: 172px; ");
+			button1.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button2.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button3.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button4.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button5.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button6.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button7.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button8.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			button9.setStyle("-fx-background-color: rgb(80,80,80) ;");
+			buttonDot.setStyle("-fx-background-color: rgb(80,80,80) ;");
 			buttonDivide.setTextFill(Color.WHITE);
 			buttonMultiply.setTextFill(Color.WHITE);
 			buttonSubtraction.setTextFill(Color.WHITE);
 			buttonPlus.setTextFill(Color.WHITE);
 			buttonEqual.setTextFill(Color.WHITE);
-
+			button0.setTextFill(Color.WHITE);
+			button1.setTextFill(Color.WHITE);
+			button2.setTextFill(Color.WHITE);
+			button3.setTextFill(Color.WHITE);
+			button4.setTextFill(Color.WHITE);
+			button5.setTextFill(Color.WHITE);
+			button6.setTextFill(Color.WHITE);
+			button7.setTextFill(Color.WHITE);
+			button8.setTextFill(Color.WHITE);
+			button9.setTextFill(Color.WHITE);
+			buttonDot.setTextFill(Color.WHITE);
+			
 			buttonAC.setOnAction(e -> {
 				label.setText("0");
 				option = "";
@@ -135,7 +146,7 @@ public class Main extends Application {
 						setLabelText(Float.parseFloat(temp) + Float.parseFloat(label.getText()));
 					} else if (option.equals("/")) {
 						if (label.getText().equals("0")) {
-							label.setText("EROR");
+							label.setText("ERROR");
 						} else {
 							setLabelText(Float.parseFloat(temp) / Float.parseFloat(label.getText()));
 						}
@@ -197,7 +208,7 @@ public class Main extends Application {
 			VBox rootVBox = new VBox(rootHBox, rootHBox2, rootHBox3, rootHBox4, rootHBox5);
 			rootVBox.setSpacing(10);
 			root.getChildren().addAll(label, rootVBox);
-			root.setStyle("-fx-background-color: black ;");
+			root.setStyle("-fx-background-color: rgb(28, 28, 28) ;");
 
 			AnchorPane.setTopAnchor(rootVBox, 140.0);
 			AnchorPane.setLeftAnchor(rootVBox, 20.0);
@@ -208,7 +219,7 @@ public class Main extends Application {
 			primaryStage.setTitle("Calculator");
 			primaryStage.setScene(scene);
 			primaryStage.show();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
