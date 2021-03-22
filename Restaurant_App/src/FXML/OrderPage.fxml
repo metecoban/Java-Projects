@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorOrderPage" prefHeight="713.0" prefWidth="866.0" style="-fx-background-color: #D4D3D1;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.OrderPageController">
+   <children>
+      <Label layoutX="627.0" layoutY="119.0" text="Receipt:">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="textAreaReceipt" layoutX="525.0" layoutY="146.0" prefHeight="358.0" prefWidth="253.0" />
+      <JFXButton fx:id="buttonCloseTable" layoutX="620.0" layoutY="522.0" onAction="#closeTheTable" prefHeight="72.0" prefWidth="158.0" style="-fx-background-color: #7D8DB0;" text="Close The Table">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <JFXComboBox fx:id="comboFood" layoutX="140.0" layoutY="132.0" prefHeight="25.0" prefWidth="177.0" />
+      <Label fx:id="labelTableNum" layoutX="168.0" layoutY="60.0" text="Table Number">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="82.0" layoutY="136.0" text="Foods:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXComboBox fx:id="comboDrink" layoutX="140.0" layoutY="195.0" prefHeight="25.0" prefWidth="177.0" />
+      <Label layoutX="81.0" layoutY="196.0" text="Drinks:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXButton fx:id="buttonFoodAdd" layoutX="81.0" layoutY="251.0" onAction="#addFood" style="-fx-background-color: #7D8DB0;" text="Add Food">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="buttonDrinkAdd" layoutX="283.0" layoutY="251.0" onAction="#addDrink" style="-fx-background-color: #7D8DB0;" text="Add Drink">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <Label layoutX="330.0" layoutY="136.0" text="Amount:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="tFFoodAmount" layoutX="399.0" layoutY="135.0" prefHeight="25.0" prefWidth="25.0" />
+      <Label layoutX="330.0" layoutY="196.0" text="Amount:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="tFDrinkAmount" layoutX="399.0" layoutY="195.0" prefHeight="25.0" prefWidth="25.0" />
+      <JFXButton fx:id="buttonRmvSlctd" layoutX="108.0" layoutY="604.0" onAction="#removeSelected" style="-fx-background-color: #7D8DB0;" text="Remove selected">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <JFXListView fx:id="listViewProduct" layoutX="106.0" layoutY="310.0" prefHeight="276.0" prefWidth="246.0" />
+      <JFXButton fx:id="buttonGoBack" contentDisplay="RIGHT" layoutX="709.0" layoutY="14.0" onAction="#clickGoBack" prefHeight="58.0" prefWidth="137.0" style="-fx-background-color: #7D8DB0;" text="Go Back">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../Icons/cross.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

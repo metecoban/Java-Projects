@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="378.0" prefWidth="563.0" style="-fx-background-color: #C6B9B3;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LoginController">
+	<children>
+		<JFXTextField fx:id="textfUsername" layoutX="222.0" layoutY="133.0" promptText="Username">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXTextField>
+		<JFXPasswordField fx:id="textfPassword" layoutX="222.0" layoutY="179.0" promptText="Password">
+			<font>
+				<Font size="14.0" />
+			</font>
+		</JFXPasswordField>
+		<JFXButton fx:id="btnLogin" layoutX="296.0" layoutY="230.0" onAction="#login" prefHeight="37.0" prefWidth="83.0" style="-fx-border-color: black; -fx-background-color: #7D8DB0; -fx-border-radius: 5px;" text="Login" textFill="#110000">
+			<font>
+				<Font name="Arial Black" size="14.0" />
+			</font>
+		</JFXButton>
+		<ImageView fitHeight="200.0" fitWidth="200.0">
+			<image>
+				<Image url="@../Icons/tray.png" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="24.0" fitWidth="24.0" layoutX="188.0" layoutY="139.0">
+			<image>
+				<Image url="@../../../../Downloads/user.png" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="24.0" fitWidth="24.0" layoutX="188.0" layoutY="182.0">
+			<image>
+				<Image url="@../../../../Downloads/key.png" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="24.0" fitWidth="24.0" layoutX="188.0" layoutY="139.0">
+			<image>
+				<Image url="@../Icons/user.png" />
+			</image>
+		</ImageView>
+		<ImageView fitHeight="24.0" fitWidth="24.0" layoutX="188.0" layoutY="188.0">
+			<image>
+				<Image url="@../Icons/key.png" />
+			</image>
+		</ImageView>
+		<Label layoutX="198.0" layoutY="79.0" text="Coban Restaurant" textFill="#170505">
+			<font>
+				<Font name="Arial Black" size="20.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>

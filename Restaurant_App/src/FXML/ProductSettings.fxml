@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPaneProducts" prefHeight="713.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProductSettingsController">
+   <children>
+      <Label layoutX="208.0" layoutY="71.0" text="Foods:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXListView fx:id="listVievFood" layoutX="101.0" layoutY="295.0" prefHeight="269.0" prefWidth="215.0" />
+      <Label layoutX="609.0" layoutY="71.0" text="Drinks:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXListView fx:id="listVievDrink" layoutX="545.0" layoutY="295.0" prefHeight="269.0" prefWidth="215.0" />
+      <Label layoutX="90.0" layoutY="123.0" text="Food Name:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="tFFoodName" layoutX="182.0" layoutY="122.0" />
+      <Label layoutX="90.0" layoutY="161.0" text="Price:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXTextField fx:id="tFFoodPrice" layoutX="140.0" layoutY="160.0" prefHeight="25.0" prefWidth="65.0" />
+      <JFXButton fx:id="buttonFoodAdd" layoutX="88.0" layoutY="203.0" onAction="#clickButtonFoodAdd" style="-fx-background-color: #7D8DB0;" text="Add">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <Separator layoutX="430.0" layoutY="71.0" orientation="VERTICAL" prefHeight="635.0" prefWidth="0.0" />
+      <Label layoutX="363.0" layoutY="24.0" text="Product Settings">
+         <font>
+            <Font name="Arial Black" size="16.0" />
+         </font></Label>
+      <JFXTextField fx:id="tFDrinkName" layoutX="630.0" layoutY="129.0" prefHeight="25.0" prefWidth="167.0" />
+      <JFXTextField fx:id="tFDrinkBrand" layoutX="589.0" layoutY="160.0" prefHeight="25.0" prefWidth="135.0" />
+      <JFXTextField fx:id="tFDrinkPrice" layoutX="587.0" layoutY="196.0" prefHeight="25.0" prefWidth="65.0" />
+      <JFXButton fx:id="buttonDrinkAdd" layoutX="536.0" layoutY="241.0" onAction="#clickButtonDrinkAdd" style="-fx-background-color: #7D8DB0;" text="Add">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <Label layoutX="539.0" layoutY="130.0" text="Drink Name:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <Label layoutX="539.0" layoutY="161.0" text="Brand:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <Label layoutX="538.0" layoutY="197.0" text="Price:">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></Label>
+      <JFXButton fx:id="buttonDeleteSelectedFood" layoutX="101.0" layoutY="584.0" onAction="#clickbuttonDeleteSelectedFood" style="-fx-background-color: #7D8DB0;" text="Delete Selected">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="buttonDeleteSelectedDrink" layoutX="545.0" layoutY="584.0" onAction="#clickbuttonDeleteSelectedDrink" style="-fx-background-color: #7D8DB0;" text="Delete Selected">
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="buttonGoBack" contentDisplay="RIGHT" layoutX="713.0" layoutY="24.0" onAction="#clickGoBack" prefHeight="58.0" prefWidth="143.0" style="-fx-background-color: #7D8DB0;" text="Go Back">
+         <graphic>
+            <ImageView>
+               <image>
+                  <Image url="@../Icons/cross.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="Arial Black" size="14.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
