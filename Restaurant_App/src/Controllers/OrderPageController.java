@@ -109,8 +109,9 @@ public class OrderPageController implements Initializable {
 			str += "  " + list.get(i) + "\t= " + s1 * s2 + "$\n";
 		}
 		textAreaReceipt.appendText("\n                      Coban Restaurant\n\n   Date: " + dayFormatter.format(date)
-				+ "\n   Time: " + timeFormatter.format(date) + "\n\nProducts:\n" + str
-				+ "\n  ---------------------------------------------  \n  Total: " + total + "$");
+				+ "\n   Time: " + timeFormatter.format(date) + "\n   Receipt No: " + (Main.historyList.size() + 1)
+				+ "\n\nProducts:\n" + str + "\n  ---------------------------------------------  \n  Total: " + total
+				+ "$");
 		Main.tableArray[TableController.getInstance().tableName() - 1].setTotalReceipt(String.valueOf(total));
 
 	}
